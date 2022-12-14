@@ -8,6 +8,7 @@ var guessedNumber = new int();
 
 var random = new Random();
 
+// validare (valori mai mici, fara stringuri), text mesaje
 Console.WriteLine("Insert the lower limit of the range: ");
 lowerLimit = Convert.ToInt32(Console.ReadLine());
 
