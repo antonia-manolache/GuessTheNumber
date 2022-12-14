@@ -10,6 +10,8 @@ var guessedNumber = new int();
 
 var random = new Random();
 
+// Difference between the CheckBoundaries and ValidateBoundaries naming. Seems almost the same.
+// Why CheckBoundaries has params and ValidateBoundaries doesn't?
 bool CheckBoundaries(int lowerLimit, int upperLimit)
 {
     return lowerLimit <= upperLimit;
@@ -23,6 +25,7 @@ void ValidateBoundaries()
         if(!CheckBoundaries(lowerLimit, upperLimit))
         {
             Console.WriteLine("The upper limit is less than the lower limit. Insert lower limit again: ");
+            // In case of invalid values, why only the upper limit is changed. Is it possible to introduce wrong lower limit value in this context?
             ReadUpperLimit();
         }
         else
@@ -134,7 +137,7 @@ void KeepGuessing()
     Console.WriteLine("Congratulation! " + guessedNumber + " is the number I was thinking about.");
 }
 
-
+// public logic, better placed in the beginning of the class
 ReadLowerLimit();
 ReadUpperLimit();
 
